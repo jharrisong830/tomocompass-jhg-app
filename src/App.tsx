@@ -2,14 +2,14 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 
 import PersonalityQuiz from "./components/PersonalityQuiz";
-import { calculatePersonality } from "./lib/personality";
+import { calculatePersonality, Personality } from "./lib/personality";
 
 export default function App() {
     const [movement, setMovement] = useState<number | null>(null);
     const [speech, setSpeech] = useState<number | null>(null);
     const [expressiveness, setExpressiveness] = useState<number | null>(null);
     const [attitude, setAttitude] = useState<number | null>(null);
-    const [result, setResult] = useState<string | null>(null);
+    const [result, setResult] = useState<Personality | null>(null);
 
     /** set all attributes to null to reset the quiz */
     const handleReset = () => {
@@ -32,8 +32,8 @@ export default function App() {
         <main>
             <nav
                 className="navbar sticky-top navbar-expand-md"
-                data-bs-theme="dark"
-                style={{ backgroundColor: "#253863" }}
+                data-bs-theme="light"
+                style={{ backgroundColor: "#FDF3A5" }}
             >
                 <div className="container-fluid">
                     <div className="fw-bold">
@@ -95,7 +95,7 @@ export default function App() {
 
             {result && (
                 <div className="alert alert-success mt-3" role="alert">
-                    Your personality is: {result}
+                    Your personality is: {result.quadrant} {result.subtype}
                 </div>
             )}
         </main>

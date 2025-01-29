@@ -10,7 +10,8 @@ export default function PersonalityQuiz({
     expressiveness,
     setExpressiveness,
     attitude,
-    setAttitude
+    setAttitude,
+    onSubmit
 }: {
     movement: number | null;
     setMovement: (value: number) => void;
@@ -20,12 +21,8 @@ export default function PersonalityQuiz({
     setExpressiveness: (value: number) => void;
     attitude: number | null;
     setAttitude: (value: number) => void;
+    onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }) {
-    const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        console.log({ movement, speech, expressiveness, attitude });
-    };
-
     const onValueChange = (
         e: React.ChangeEvent<HTMLInputElement>,
         valueType: Attribute

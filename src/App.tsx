@@ -2,12 +2,14 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 
 import PersonalityQuiz from "./components/PersonalityQuiz";
+import { calculatePersonality } from "./lib/personality";
 
 export default function App() {
     const [movement, setMovement] = useState<number | null>(null);
     const [speech, setSpeech] = useState<number | null>(null);
     const [expressiveness, setExpressiveness] = useState<number | null>(null);
     const [attitude, setAttitude] = useState<number | null>(null);
+    const [result, setResult] = useState<string | null>(null);
 
     /** set all attributes to null to reset the quiz */
     const handleReset = () => {
@@ -15,6 +17,15 @@ export default function App() {
         setSpeech(null);
         setExpressiveness(null);
         setAttitude(null);
+        setResult(null);
+    };
+
+    const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        console.log({ movement, speech, expressiveness, attitude });
+        setResult(
+            calculatePersonality(movement!, speech!, expressiveness!, attitude!)
+        );
     };
 
     return (
@@ -66,6 +77,7 @@ export default function App() {
                 setExpressiveness={setExpressiveness}
                 attitude={attitude}
                 setAttitude={setAttitude}
+                onSubmit={onSubmit}
             />
 
             <Button
@@ -80,6 +92,12 @@ export default function App() {
             >
                 Reset
             </Button>
+
+            {result && (
+                <div className="alert alert-success mt-3" role="alert">
+                    Your personality is: {result}
+                </div>
+            )}
         </main>
     );
 }

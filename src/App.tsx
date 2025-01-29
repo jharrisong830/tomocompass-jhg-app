@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 
 import PersonalityQuiz from "./components/PersonalityQuiz";
 import { calculatePersonality, Personality } from "./lib/personality";
+import PersonalityResult from "./components/PersonalityResult";
 
 export default function App() {
     const [movement, setMovement] = useState<number | null>(null);
@@ -93,15 +94,7 @@ export default function App() {
                 Reset
             </Button>
 
-            {result && (
-                <div
-                    className="alert mt-3"
-                    role="alert"
-                    style={{ backgroundColor: result.color }}
-                >
-                    Your personality is: {result.quadrant} {result.subtype}
-                </div>
-            )}
+            {result && <PersonalityResult result={result} />}
         </main>
     );
 }

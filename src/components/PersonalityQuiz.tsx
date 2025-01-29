@@ -45,10 +45,11 @@ export default function PersonalityQuiz({
     };
 
     return (
-        <div className="container py-5">
+        <div className="container py-5 text-center">
             <Form onSubmit={(e) => onSubmit(e)}>
-                <Form.Group className="row" id="movement">
-                    <Form.Label className="col-2">Movement</Form.Label>
+                <Form.Group className="row py-2" id="movement">
+                    <Form.Label className="col-12">Movement</Form.Label>
+                    <p className="col-2">Slow</p>
                     <Form.Check
                         className="col"
                         inline
@@ -57,7 +58,6 @@ export default function PersonalityQuiz({
                         onChange={(e) => onValueChange(e, "movement")}
                         checked={movement === 0}
                         value={0}
-                        label="Slow"
                     />
                     <Form.Check
                         className="col"
@@ -121,12 +121,13 @@ export default function PersonalityQuiz({
                         onChange={(e) => onValueChange(e, "movement")}
                         checked={movement === 7}
                         value={7}
-                        label="Fast"
                     />
+                    <p className="col-2">Fast</p>
                 </Form.Group>
 
                 <Form.Group className="row" id="speech">
-                    <Form.Label className="col-2">Speech</Form.Label>
+                    <Form.Label className="col-12">Speech</Form.Label>
+                    <p className="col-2">Polite</p>
                     <Form.Check
                         className="col"
                         inline
@@ -135,7 +136,6 @@ export default function PersonalityQuiz({
                         onChange={(e) => onValueChange(e, "speech")}
                         checked={speech === 0}
                         value={0}
-                        label="Polite"
                     />
                     <Form.Check
                         className="col"
@@ -199,12 +199,13 @@ export default function PersonalityQuiz({
                         onChange={(e) => onValueChange(e, "speech")}
                         checked={speech === 8}
                         value={8}
-                        label="Direct"
                     />
+                    <p className="col-2">Direct</p>
                 </Form.Group>
 
                 <Form.Group className="row" id="expressiveness">
-                    <Form.Label className="col-2">Expressiveness</Form.Label>
+                    <Form.Label className="col-12">Expressiveness</Form.Label>
+                    <p className="col-2">Flat</p>
                     <Form.Check
                         className="col"
                         inline
@@ -213,7 +214,6 @@ export default function PersonalityQuiz({
                         onChange={(e) => onValueChange(e, "expressiveness")}
                         checked={expressiveness === 0}
                         value={0}
-                        label="Flat"
                     />
                     <Form.Check
                         className="col"
@@ -277,12 +277,13 @@ export default function PersonalityQuiz({
                         onChange={(e) => onValueChange(e, "expressiveness")}
                         checked={expressiveness === 7}
                         value={7}
-                        label="Varied"
                     />
+                    <p className="col-2">Varied</p>
                 </Form.Group>
 
                 <Form.Group className="row" id="attitude">
-                    <Form.Label className="col-2">Attitude</Form.Label>
+                    <Form.Label className="col-12">Attitude</Form.Label>
+                    <p className="col-2">Serious</p>
                     <Form.Check
                         className="col"
                         inline
@@ -291,7 +292,6 @@ export default function PersonalityQuiz({
                         onChange={(e) => onValueChange(e, "attitude")}
                         checked={attitude === 0}
                         value={0}
-                        label="Serious"
                     />
                     <Form.Check
                         className="col"
@@ -355,8 +355,8 @@ export default function PersonalityQuiz({
                         onChange={(e) => onValueChange(e, "attitude")}
                         checked={attitude === 8}
                         value={8}
-                        label="Relaxed"
                     />
+                    <p className="col-2">Relaxed</p>
                 </Form.Group>
 
                 <Button

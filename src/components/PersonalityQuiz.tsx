@@ -1,12 +1,26 @@
-import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
-export default function PersonalityQuiz() {
-    const [movement, setMovement] = useState<number | null>(null);
-    const [speech, setSpeech] = useState<number | null>(null);
-    const [expressiveness, setExpressiveness] = useState<number | null>(null);
-    const [attitude, setAttitude] = useState<number | null>(null);
+import { Attribute } from "../lib/personality";
 
+export default function PersonalityQuiz({
+    movement,
+    setMovement,
+    speech,
+    setSpeech,
+    expressiveness,
+    setExpressiveness,
+    attitude,
+    setAttitude
+}: {
+    movement: number | null;
+    setMovement: (value: number) => void;
+    speech: number | null;
+    setSpeech: (value: number) => void;
+    expressiveness: number | null;
+    setExpressiveness: (value: number) => void;
+    attitude: number | null;
+    setAttitude: (value: number) => void;
+}) {
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log({ movement, speech, expressiveness, attitude });
@@ -14,7 +28,7 @@ export default function PersonalityQuiz() {
 
     const onValueChange = (
         e: React.ChangeEvent<HTMLInputElement>,
-        valueType: "movement" | "speech" | "expressiveness" | "attitude"
+        valueType: Attribute
     ) => {
         const value = parseInt(e.target.value);
         switch (valueType) {

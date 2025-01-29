@@ -1,6 +1,22 @@
+import { useState } from "react";
+import { Button } from "react-bootstrap";
+
 import PersonalityQuiz from "./components/PersonalityQuiz";
 
 export default function App() {
+    const [movement, setMovement] = useState<number | null>(null);
+    const [speech, setSpeech] = useState<number | null>(null);
+    const [expressiveness, setExpressiveness] = useState<number | null>(null);
+    const [attitude, setAttitude] = useState<number | null>(null);
+
+    /** set all attributes to null to reset the quiz */
+    const handleReset = () => {
+        setMovement(null);
+        setSpeech(null);
+        setExpressiveness(null);
+        setAttitude(null);
+    };
+
     return (
         <main>
             <nav
@@ -41,7 +57,29 @@ export default function App() {
                 </p>
             </div>
 
-            <PersonalityQuiz />
+            <PersonalityQuiz
+                movement={movement}
+                setMovement={setMovement}
+                speech={speech}
+                setSpeech={setSpeech}
+                expressiveness={expressiveness}
+                setExpressiveness={setExpressiveness}
+                attitude={attitude}
+                setAttitude={setAttitude}
+            />
+
+            <Button
+                variant="danger"
+                onClick={handleReset}
+                disabled={
+                    movement === null &&
+                    speech === null &&
+                    expressiveness === null &&
+                    attitude === null
+                }
+            >
+                Reset
+            </Button>
         </main>
     );
 }

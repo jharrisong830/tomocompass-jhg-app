@@ -57,10 +57,8 @@ export default function PersonalityQuiz({
                         onChange={(e) => onValueChange(e, "movement")}
                         checked={movement === 0}
                         value={0}
-                    >
-                        <p>Slow</p>
-                        <Form.Check.Input type="radio" />
-                    </Form.Check>
+                        label="Slow"
+                    />
                     <Form.Check
                         className="col"
                         inline

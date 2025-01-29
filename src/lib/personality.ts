@@ -5,7 +5,7 @@ export type Subtype =
     | "Lone Wolf"
     | "Thinker"
     | "Brainiac"
-    | "Go-getter"
+    | "Go-Getter"
     | "Free Spirit"
     | "Artist"
     | "Designer"
@@ -30,88 +30,88 @@ export const personalityGrid: Array<Array<Personality>> = [
         {
             quadrant: "Independent",
             subtype: "Lone Wolf",
-            color: "#FFFFFF"
+            color: "#628080"
         },
         {
             quadrant: "Independent",
             subtype: "Thinker",
-            color: "#FFFFFF"
+            color: "#689495"
         },
         {
             quadrant: "Confident",
             subtype: "Brainiac",
-            color: "#FFFFFF"
+            color: "#2962F6"
         },
         {
             quadrant: "Confident",
-            subtype: "Go-getter",
-            color: "#FFFFFF"
+            subtype: "Go-Getter",
+            color: "#563EEF"
         }
     ],
     [
         {
             quadrant: "Independent",
             subtype: "Free Spirit",
-            color: "#FFFFFF"
+            color: "#719E6A"
         },
         {
             quadrant: "Independent",
             subtype: "Artist",
-            color: "#FFFFFF"
+            color: "#7ABC56"
         },
         {
             quadrant: "Confident",
             subtype: "Designer",
-            color: "#FFFFFF"
+            color: "#4294F6"
         },
         {
             quadrant: "Confident",
             subtype: "Adventurer",
-            color: "#FFFFFF"
+            color: "#8C5EEF"
         }
     ],
     [
         {
             quadrant: "Easygoing",
             subtype: "Buddy",
-            color: "#FFFFFF"
+            color: "#FBE878"
         },
         {
             quadrant: "Easygoing",
             subtype: "Dreamer",
-            color: "#FFFFFF"
+            color: "#F5CA5B"
         },
         {
             quadrant: "Outgoing",
             subtype: "Charmer",
-            color: "#FFFFFF"
+            color: "#EC782F"
         },
         {
             quadrant: "Outgoing",
             subtype: "Leader",
-            color: "#FFFFFF"
+            color: "#EB5D2A"
         }
     ],
     [
         {
             quadrant: "Easygoing",
             subtype: "Softie",
-            color: "#FFFFFF"
+            color: "#F2ADAA"
         },
         {
             quadrant: "Easygoing",
             subtype: "Optimist",
-            color: "#FFFFFF"
+            color: "#F09B98"
         },
         {
             quadrant: "Outgoing",
             subtype: "Trendsetter",
-            color: "#FFFFFF"
+            color: "#E93D81"
         },
         {
             quadrant: "Outgoing",
             subtype: "Entertainer",
-            color: "#FFFFFF"
+            color: "#DC2F21"
         }
     ]
 ];

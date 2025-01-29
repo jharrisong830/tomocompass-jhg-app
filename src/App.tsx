@@ -94,7 +94,11 @@ export default function App() {
             </Button>
 
             {result && (
-                <div className="alert alert-success mt-3" role="alert">
+                <div
+                    className="alert mt-3"
+                    role="alert"
+                    style={{ backgroundColor: result.color }}
+                >
                     Your personality is: {result.quadrant} {result.subtype}
                 </div>
             )}

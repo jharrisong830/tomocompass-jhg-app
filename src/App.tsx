@@ -28,10 +28,19 @@ export default function App() {
                     beep boop
                 </h1>
                 <p className="lead">Tomodachi Life Personality Quiz</p>
-                <p>See <a href="https://tomodachi.fandom.com/wiki/Personality" rel="noreferrer" target="_blank">here</a> for details</p>
+                <p>
+                    See{" "}
+                    <a
+                        href="https://tomodachi.fandom.com/wiki/Personality"
+                        rel="noreferrer"
+                        target="_blank"
+                    >
+                        here
+                    </a>{" "}
+                    for details
+                </p>
             </div>
 
-            
             <PersonalityQuiz />
         </main>
     );

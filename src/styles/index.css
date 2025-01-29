@@ -19,3 +19,25 @@ code {
 .bi {
     width: auto !important;
 }
+
+input[type="radio"] {
+    display: none;
+    width: 0px;
+    height: 0px;
+}
+
+input[type="radio"] + label div {
+    cursor: pointer;
+    border-radius: 2.5px;
+    border-width: 3px;
+    border-color: #cd4e2e;
+    border-style: solid;
+    background-color: #eb772f;
+    width: 35px;
+    height: 35px;
+}
+
+input[type="radio"]:checked + label div {
+    background-color: #74faf8;
+    border-color: #2d5c60;
+}

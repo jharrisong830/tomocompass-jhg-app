@@ -1,4 +1,4 @@
-import { Form, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 import { Attribute } from "../lib/personality";
 
@@ -46,318 +46,414 @@ export default function PersonalityQuiz({
 
     return (
         <div className="container py-5 text-center">
-            <Form onSubmit={(e) => onSubmit(e)}>
-                <Form.Group className="row py-2" id="movement">
-                    <Form.Label className="col-12">Movement</Form.Label>
+            <form onSubmit={(e) => onSubmit(e)}>
+                <div className="row py-2" id="movement">
+                    <label className="col-12">Movement</label>
                     <p className="col-2">Slow</p>
-                    <Form.Check
-                        className="col"
-                        inline
+                    <input
+                        id="movement0"
                         type="radio"
                         name="movement"
                         onChange={(e) => onValueChange(e, "movement")}
                         checked={movement === 0}
                         value={0}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="movement0">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="movement1"
                         type="radio"
                         name="movement"
                         onChange={(e) => onValueChange(e, "movement")}
                         checked={movement === 1}
                         value={1}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="movement1">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="movement2"
                         type="radio"
                         name="movement"
                         onChange={(e) => onValueChange(e, "movement")}
                         checked={movement === 2}
                         value={2}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="movement2">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="movement3"
                         type="radio"
                         name="movement"
                         onChange={(e) => onValueChange(e, "movement")}
                         checked={movement === 3}
                         value={3}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="movement3">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="movement4"
                         type="radio"
                         name="movement"
                         onChange={(e) => onValueChange(e, "movement")}
                         checked={movement === 4}
                         value={4}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="movement4">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="movement5"
                         type="radio"
                         name="movement"
                         onChange={(e) => onValueChange(e, "movement")}
                         checked={movement === 5}
                         value={5}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="movement5">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="movement6"
                         type="radio"
                         name="movement"
                         onChange={(e) => onValueChange(e, "movement")}
                         checked={movement === 6}
                         value={6}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="movement6">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="movement7"
                         type="radio"
                         name="movement"
                         onChange={(e) => onValueChange(e, "movement")}
                         checked={movement === 7}
                         value={7}
                     />
-                    <p className="col-2">Fast</p>
-                </Form.Group>
+                    <label className="col" htmlFor="movement7">
+                        <div></div>
+                    </label>
 
-                <Form.Group className="row" id="speech">
-                    <Form.Label className="col-12">Speech</Form.Label>
+                    <p className="col-2">Fast</p>
+                </div>
+
+                <div className="row" id="speech">
+                    <label className="col-12">Speech</label>
                     <p className="col-2">Polite</p>
-                    <Form.Check
-                        className="col"
-                        inline
+                    <input
+                        id="speech0"
                         type="radio"
                         name="speech"
                         onChange={(e) => onValueChange(e, "speech")}
                         checked={speech === 0}
                         value={0}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="speech0">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="speech1"
                         type="radio"
                         name="speech"
                         onChange={(e) => onValueChange(e, "speech")}
                         checked={speech === 1}
                         value={1}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="speech1">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="speech2"
                         type="radio"
                         name="speech"
                         onChange={(e) => onValueChange(e, "speech")}
                         checked={speech === 2}
                         value={2}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="speech2">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="speech3"
                         type="radio"
                         name="speech"
                         onChange={(e) => onValueChange(e, "speech")}
                         checked={speech === 3}
                         value={3}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="speech3">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="speech5"
                         type="radio"
                         name="speech"
                         onChange={(e) => onValueChange(e, "speech")}
                         checked={speech === 5}
                         value={5}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="speech5">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="speech6"
                         type="radio"
                         name="speech"
                         onChange={(e) => onValueChange(e, "speech")}
                         checked={speech === 6}
                         value={6}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="speech6">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="speech7"
                         type="radio"
                         name="speech"
                         onChange={(e) => onValueChange(e, "speech")}
                         checked={speech === 7}
                         value={7}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="speech7">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="speech8"
                         type="radio"
                         name="speech"
                         onChange={(e) => onValueChange(e, "speech")}
                         checked={speech === 8}
                         value={8}
                     />
-                    <p className="col-2">Direct</p>
-                </Form.Group>
+                    <label className="col" htmlFor="speech8">
+                        <div></div>
+                    </label>
 
-                <Form.Group className="row" id="expressiveness">
-                    <Form.Label className="col-12">Expressiveness</Form.Label>
+                    <p className="col-2">Direct</p>
+                </div>
+
+                <div className="row" id="expressiveness">
+                    <label className="col-12">Expressiveness</label>
                     <p className="col-2">Flat</p>
-                    <Form.Check
-                        className="col"
-                        inline
+                    <input
+                        id="expressiveness0"
                         type="radio"
                         name="expressiveness"
                         onChange={(e) => onValueChange(e, "expressiveness")}
                         checked={expressiveness === 0}
                         value={0}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="expressiveness0">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="expressiveness1"
                         type="radio"
                         name="expressiveness"
                         onChange={(e) => onValueChange(e, "expressiveness")}
                         checked={expressiveness === 1}
                         value={1}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="expressiveness1">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="expressiveness2"
                         type="radio"
                         name="expressiveness"
                         onChange={(e) => onValueChange(e, "expressiveness")}
                         checked={expressiveness === 2}
                         value={2}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="expressiveness2">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="expressiveness3"
                         type="radio"
                         name="expressiveness"
                         onChange={(e) => onValueChange(e, "expressiveness")}
                         checked={expressiveness === 3}
                         value={3}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="expressiveness3">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="expressiveness4"
                         type="radio"
                         name="expressiveness"
                         onChange={(e) => onValueChange(e, "expressiveness")}
                         checked={expressiveness === 4}
                         value={4}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="expressiveness4">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="expressiveness5"
                         type="radio"
                         name="expressiveness"
                         onChange={(e) => onValueChange(e, "expressiveness")}
                         checked={expressiveness === 5}
                         value={5}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="expressiveness5">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="expressiveness6"
                         type="radio"
                         name="expressiveness"
                         onChange={(e) => onValueChange(e, "expressiveness")}
                         checked={expressiveness === 6}
                         value={6}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="expressiveness6">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="expressiveness7"
                         type="radio"
                         name="expressiveness"
                         onChange={(e) => onValueChange(e, "expressiveness")}
                         checked={expressiveness === 7}
                         value={7}
                     />
-                    <p className="col-2">Varied</p>
-                </Form.Group>
+                    <label className="col" htmlFor="expressiveness7">
+                        <div></div>
+                    </label>
 
-                <Form.Group className="row" id="attitude">
-                    <Form.Label className="col-12">Attitude</Form.Label>
+                    <p className="col-2">Varied</p>
+                </div>
+
+                <div className="row" id="attitude">
+                    <label className="col-12">Attitude</label>
                     <p className="col-2">Serious</p>
-                    <Form.Check
-                        className="col"
-                        inline
+                    <input
+                        id="attitude0"
                         type="radio"
                         name="attitude"
                         onChange={(e) => onValueChange(e, "attitude")}
                         checked={attitude === 0}
                         value={0}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="attitude0">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="attitude1"
                         type="radio"
                         name="attitude"
                         onChange={(e) => onValueChange(e, "attitude")}
                         checked={attitude === 1}
                         value={1}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="attitude1">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="attitude2"
                         type="radio"
                         name="attitude"
                         onChange={(e) => onValueChange(e, "attitude")}
                         checked={attitude === 2}
                         value={2}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="attitude2">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="attitude3"
                         type="radio"
                         name="attitude"
                         onChange={(e) => onValueChange(e, "attitude")}
                         checked={attitude === 3}
                         value={3}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="attitude3">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="attitude5"
                         type="radio"
                         name="attitude"
                         onChange={(e) => onValueChange(e, "attitude")}
                         checked={attitude === 5}
                         value={5}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="attitude5">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="attitude6"
                         type="radio"
                         name="attitude"
                         onChange={(e) => onValueChange(e, "attitude")}
                         checked={attitude === 6}
                         value={6}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="attitude6">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="attitude7"
                         type="radio"
                         name="attitude"
                         onChange={(e) => onValueChange(e, "attitude")}
                         checked={attitude === 7}
                         value={7}
                     />
-                    <Form.Check
-                        className="col"
-                        inline
+                    <label className="col" htmlFor="attitude7">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="attitude8"
                         type="radio"
                         name="attitude"
                         onChange={(e) => onValueChange(e, "attitude")}
                         checked={attitude === 8}
                         value={8}
                     />
+                    <label className="col" htmlFor="attitude8">
+                        <div></div>
+                    </label>
+
                     <p className="col-2">Relaxed</p>
-                </Form.Group>
+                </div>
 
                 <Button
                     type="submit"
@@ -368,10 +464,14 @@ export default function PersonalityQuiz({
                         expressiveness === null ||
                         attitude === null
                     }
+                    style={{
+                        backgroundColor: "#EB772F",
+                        borderColor: "#CD4E2E"
+                    }}
                 >
                     Submit
                 </Button>
-            </Form>
+            </form>
         </div>
     );
 }

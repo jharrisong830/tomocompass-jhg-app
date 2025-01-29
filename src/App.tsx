@@ -37,7 +37,7 @@ export default function App() {
             >
                 <div className="container-fluid">
                     <div className="fw-bold">
-                        <a>links.</a>
+                        <a>tomocompass.</a>
                         <a
                             className="navbar-brand"
                             href="https://jhg.app"

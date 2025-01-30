@@ -4,6 +4,7 @@ import { Button } from "react-bootstrap";
 import PersonalityQuiz from "./components/PersonalityQuiz";
 import { calculatePersonality, Personality } from "./lib/personality";
 import PersonalityResult from "./components/PersonalityResult";
+import AboutPopup from "./components/AboutPopup";
 
 export default function App() {
     const [movement, setMovement] = useState<number | null>(null);
@@ -53,7 +54,7 @@ export default function App() {
 
             <div className="px-4 py-5 text-center">
                 <h1 className="display-3 fw-bold text-body-emphasis">
-                    beep boop
+                    TomoCompass
                 </h1>
                 <p className="lead">Tomodachi Life Personality Quiz</p>
                 <p>
@@ -67,6 +68,7 @@ export default function App() {
                     </a>{" "}
                     for details
                 </p>
+                <AboutPopup />
             </div>
 
             <PersonalityQuiz

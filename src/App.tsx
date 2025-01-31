@@ -5,6 +5,7 @@ import PersonalityQuiz from "./components/PersonalityQuiz";
 import { calculatePersonality, Personality } from "./lib/personality";
 import PersonalityResult from "./components/PersonalityResult";
 import AboutPopup from "./components/AboutPopup";
+import Compass from "./components/Compass";
 
 export default function App() {
     const [movement, setMovement] = useState<number | null>(null);
@@ -97,6 +98,8 @@ export default function App() {
             </Button>
 
             {result && <PersonalityResult result={result} />}
+
+            <Compass />
         </main>
     );
 }

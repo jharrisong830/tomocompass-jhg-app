@@ -8,6 +8,9 @@ import AboutPopup from "./components/AboutPopup";
 import Compass from "./components/Compass";
 
 export default function App() {
+    const version = __APP_VERSION__;
+    const year = new Date().getFullYear();
+
     const [movement, setMovement] = useState<number | null>(null);
     const [speech, setSpeech] = useState<number | null>(null);
     const [expressiveness, setExpressiveness] = useState<number | null>(null);
@@ -58,17 +61,6 @@ export default function App() {
                     TomoCompass
                 </h1>
                 <p className="lead">Tomodachi Life Personality Quiz</p>
-                <p>
-                    See{" "}
-                    <a
-                        href="https://tomodachi.fandom.com/wiki/Personality"
-                        rel="noreferrer"
-                        target="_blank"
-                    >
-                        here
-                    </a>{" "}
-                    for details
-                </p>
                 <AboutPopup />
             </div>
 
@@ -99,7 +91,18 @@ export default function App() {
 
             {result && <PersonalityResult result={result} />}
 
-            <Compass />
+            <div className="container text-center">
+                <div className="row">
+                    <div className="row">
+                        <Compass cellSize={200} />
+                    </div>
+                </div>
+            </div>
+
+            <div className="container text-center">
+                <p className="lead">TomoCompass v{version}</p>
+                <p className="lead">&copy; {year} John Graham</p>
+            </div>
         </main>
     );
 }

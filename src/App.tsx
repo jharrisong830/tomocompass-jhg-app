@@ -104,7 +104,7 @@ export default function App() {
 
             <div className="container text-center">
                 <div className="row">
-                    <div className="row">
+                    <div className="col">
                         <Compass cellSize={400} result={result} />
                     </div>
                 </div>

@@ -15,6 +15,8 @@ export default function App() {
     const [speech, setSpeech] = useState<number | null>(null);
     const [expressiveness, setExpressiveness] = useState<number | null>(null);
     const [attitude, setAttitude] = useState<number | null>(null);
+    const [overall, setOverall] = useState<number | null>(null);
+
     const [result, setResult] = useState<Personality | null>(null);
 
     /** set all attributes to null to reset the quiz */
@@ -73,6 +75,8 @@ export default function App() {
                 setExpressiveness={setExpressiveness}
                 attitude={attitude}
                 setAttitude={setAttitude}
+                overall={overall}
+                setOverall={setOverall}
                 onSubmit={onSubmit}
             />
 

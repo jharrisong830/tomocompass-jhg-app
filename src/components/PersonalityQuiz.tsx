@@ -11,6 +11,8 @@ export default function PersonalityQuiz({
     setExpressiveness,
     attitude,
     setAttitude,
+    overall,
+    setOverall,
     onSubmit
 }: {
     movement: number | null;
@@ -21,6 +23,8 @@ export default function PersonalityQuiz({
     setExpressiveness: (value: number) => void;
     attitude: number | null;
     setAttitude: (value: number) => void;
+    overall: number | null;
+    setOverall: (value: number) => void;
     onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }) {
     const onValueChange = (
@@ -40,6 +44,9 @@ export default function PersonalityQuiz({
                 break;
             case "attitude":
                 setAttitude(value);
+                break;
+            case "overall":
+                setOverall(value);
                 break;
         }
     };
@@ -455,6 +462,108 @@ export default function PersonalityQuiz({
                     <p className="col-2">Relaxed</p>
                 </div>
 
+                <div className="row" id="overall">
+                    <label className="col-12">Overall</label>
+                    <p className="col-2">Quirky</p>
+                    <input
+                        id="overall0"
+                        type="radio"
+                        name="overall"
+                        onChange={(e) => onValueChange(e, "overall")}
+                        checked={overall === 0}
+                        value={0}
+                    />
+                    <label className="col" htmlFor="overall0">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="overall1"
+                        type="radio"
+                        name="overall"
+                        onChange={(e) => onValueChange(e, "overall")}
+                        checked={overall === 1}
+                        value={1}
+                    />
+                    <label className="col" htmlFor="overall1">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="overall2"
+                        type="radio"
+                        name="overall"
+                        onChange={(e) => onValueChange(e, "overall")}
+                        checked={overall === 2}
+                        value={2}
+                    />
+                    <label className="col" htmlFor="overall2">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="overall3"
+                        type="radio"
+                        name="overall"
+                        onChange={(e) => onValueChange(e, "overall")}
+                        checked={overall === 3}
+                        value={3}
+                    />
+                    <label className="col" htmlFor="overall3">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="overall5"
+                        type="radio"
+                        name="overall"
+                        onChange={(e) => onValueChange(e, "overall")}
+                        checked={overall === 5}
+                        value={5}
+                    />
+                    <label className="col" htmlFor="overall5">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="overall6"
+                        type="radio"
+                        name="overall"
+                        onChange={(e) => onValueChange(e, "overall")}
+                        checked={overall === 6}
+                        value={6}
+                    />
+                    <label className="col" htmlFor="overall6">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="overall7"
+                        type="radio"
+                        name="overall"
+                        onChange={(e) => onValueChange(e, "overall")}
+                        checked={overall === 7}
+                        value={7}
+                    />
+                    <label className="col" htmlFor="overall7">
+                        <div></div>
+                    </label>
+
+                    <input
+                        id="overall8"
+                        type="radio"
+                        name="overall"
+                        onChange={(e) => onValueChange(e, "overall")}
+                        checked={overall === 8}
+                        value={8}
+                    />
+                    <label className="col" htmlFor="overall8">
+                        <div></div>
+                    </label>
+
+                    <p className="col-2">Normal</p>
+                </div>
+
                 <Button
                     type="submit"
                     variant="success"
@@ -462,7 +571,8 @@ export default function PersonalityQuiz({
                         movement === null ||
                         speech === null ||
                         expressiveness === null ||
-                        attitude === null
+                        attitude === null ||
+                        overall === null
                     }
                     style={{
                         backgroundColor: "#EB772F",

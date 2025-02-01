@@ -1,4 +1,9 @@
-export type Attribute = "movement" | "speech" | "expressiveness" | "attitude";
+export type Attribute =
+    | "movement"
+    | "speech"
+    | "expressiveness"
+    | "attitude"
+    | "overall";
 
 export type Quadrant = "Independent" | "Confident" | "Easygoing" | "Outgoing";
 export type Subtype =

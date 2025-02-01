@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { Stage, Layer, Rect, Circle, Text } from "react-konva";
 
 import { Personality, personalityGrid } from "../lib/personality";

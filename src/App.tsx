@@ -6,6 +6,7 @@ import { calculatePersonality, Personality } from "./lib/personality";
 import PersonalityResult from "./components/PersonalityResult";
 import AboutPopup from "./components/AboutPopup";
 import Compass from "./components/Compass";
+import Connections from "./components/Connections";
 
 export default function App() {
     const version = __APP_VERSION__;
@@ -104,9 +105,15 @@ export default function App() {
                 </div>
             </div>
 
+            <Connections />
+
             <div className="container text-center">
-                <p className="lead">TomoCompass v{version}</p>
-                <p className="lead">&copy; {year} John Graham</p>
+                <p className="lead text-body-emphasis">
+                    TomoCompass v{version}
+                </p>
+                <p className="lead text-body-emphasis">
+                    &copy; {year} John Graham
+                </p>
             </div>
         </main>
     );

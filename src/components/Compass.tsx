@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Stage, Layer, Rect, Circle, Text } from "react-konva";
 
 import { Personality, personalityGrid } from "../lib/personality";
@@ -5,15 +6,15 @@ import { Personality, personalityGrid } from "../lib/personality";
 
 export default function Compass({
     cellSize,
-    result
+    result,
+    stageRef
 }: {
     cellSize: number;
     result: Personality | null;
+    stageRef: any;
 }) {
-    // const cellSize = Math.min(window.innerWidth / 4, window.innerHeight / 4);
-
     return (
-        <Stage width={cellSize * 4} height={cellSize * 4}>
+        <Stage ref={stageRef} width={cellSize * 4} height={cellSize * 4}>
             {personalityGrid
                 .slice()
                 .reverse()

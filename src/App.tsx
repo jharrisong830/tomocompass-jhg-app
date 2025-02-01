@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button } from "react-bootstrap";
 
 import PersonalityQuiz from "./components/PersonalityQuiz";
@@ -11,6 +11,12 @@ import Connections from "./components/Connections";
 export default function App() {
     const version = __APP_VERSION__;
     const year = new Date().getFullYear();
+    const cellSize = Math.min(
+        Math.floor(window.innerWidth / 4),
+        Math.floor(window.innerHeight / 4)
+    );
+
+    const stageRef = useRef(null);
 
     const [movement, setMovement] = useState<number | null>(null);
     const [speech, setSpeech] = useState<number | null>(null);
@@ -100,12 +106,18 @@ export default function App() {
                 Reset
             </Button>
 
-            {result && <PersonalityResult result={result} />}
+            {result && (
+                <PersonalityResult result={result} stageRef={stageRef} />
+            )}
 
             <div className="container text-center">
                 <div className="row">
                     <div className="col">
-                        <Compass cellSize={400} result={result} />
+                        <Compass
+                            cellSize={cellSize}
+                            result={result}
+                            stageRef={stageRef}
+                        />
                     </div>
                 </div>
             </div>

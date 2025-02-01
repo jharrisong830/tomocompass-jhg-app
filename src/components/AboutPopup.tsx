@@ -37,7 +37,7 @@ export default function AboutPopup() {
                         on the below grid. There are four personality
                         types/quadrants, each of which has four subtypes.
                     </p>
-                    <Compass cellSize={100} result={null} />
+                    <Compass cellSize={100} result={null} stageRef={null} />
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>

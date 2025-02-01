@@ -1,4 +1,4 @@
-import { Stage, Layer, Rect, Circle, Text } from "react-konva";
+import { Stage, Layer, Rect, Circle, Text, Group } from "react-konva";
 
 import { Personality, personalityGrid } from "../lib/personality";
 import Gridlines from "./Gridlines";
@@ -22,7 +22,7 @@ export default function Compass({
                         <Layer id={`row${y}`} key={y}>
                             {row.map((elem, x) => {
                                 return (
-                                    <div
+                                    <Group
                                         key={`${elem.quadrant}-${elem.subtype}`}
                                         id={`${elem.quadrant}-${elem.subtype}`}
                                     >
@@ -35,8 +35,6 @@ export default function Compass({
                                             fill={elem.color}
                                         />
 
-                                        <Gridlines cellSize={cellSize} />
-
                                         <Text
                                             id={`${elem.quadrant}-${elem.subtype}`}
                                             x={x * cellSize}
@@ -47,7 +45,7 @@ export default function Compass({
                                             verticalAlign="middle"
                                             text={`${elem.quadrant}-${elem.subtype}`}
                                         />
-                                    </div>
+                                    </Group>
                                 );
                             })}
                             {result && (
@@ -70,6 +68,9 @@ export default function Compass({
                         </Layer>
                     );
                 })}
+            <Layer>
+                <Gridlines cellSize={cellSize} />
+            </Layer>
         </Stage>
     );
 }

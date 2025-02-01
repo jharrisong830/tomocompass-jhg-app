@@ -87,7 +87,8 @@ export default function App() {
                     movement === null &&
                     speech === null &&
                     expressiveness === null &&
-                    attitude === null
+                    attitude === null &&
+                    overall === null
                 }
             >
                 Reset

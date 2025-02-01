@@ -4,6 +4,19 @@ export default function Connections() {
             <p className="lead text-body-emphasis">Connect with me.</p>
             <div className="container flex-row align-items-center">
                 <a
+                    href="https://jhg.app"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-light btn-lg icon-link mx-2 my-2 my-md-0"
+                >
+                    <img
+                        className="bi"
+                        src="/link_icons/network.svg"
+                        alt="Network symbol"
+                    />
+                    Homepage
+                </a>
+                <a
                     href="https://github.com/jharrisong830"
                     target="_blank"
                     rel="noreferrer"

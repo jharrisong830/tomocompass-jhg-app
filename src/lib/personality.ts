@@ -28,6 +28,11 @@ export type Personality = {
     quadrant: Quadrant;
     subtype: Subtype;
     color: string;
+    movement?: number;
+    speech?: number;
+    expressiveness?: number;
+    attitude?: number;
+    overall?: number;
 };
 
 export const personalityGrid: Array<Array<Personality>> = [
@@ -125,10 +130,27 @@ export const calculatePersonality = (
     movement: number,
     speech: number,
     expressiveness: number,
-    attitude: number
+    attitude: number,
+    overall: number
 ): Personality => {
     const xAxis = Math.floor((movement + speech) / 4);
     const yAxis = Math.floor((expressiveness + attitude) / 4);
 
-    return personalityGrid[yAxis][xAxis];
+    // console.log({
+    //     ...personalityGrid[yAxis][xAxis],
+    //     movement,
+    //     speech,
+    //     expressiveness,
+    //     attitude,
+    //     overall
+    // });
+
+    return {
+        ...personalityGrid[yAxis][xAxis],
+        movement,
+        speech,
+        expressiveness,
+        attitude,
+        overall
+    };
 };

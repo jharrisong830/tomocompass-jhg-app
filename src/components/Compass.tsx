@@ -1,8 +1,15 @@
-import { Stage, Layer, Rect, Text } from "react-konva";
+import { Stage, Layer, Rect, Circle, Text } from "react-konva";
 
-import { personalityGrid } from "../lib/personality";
+import { Personality, personalityGrid } from "../lib/personality";
+// import Gridlines from "./Gridlines";
 
-export default function Compass({ cellSize }: { cellSize: number }) {
+export default function Compass({
+    cellSize,
+    result
+}: {
+    cellSize: number;
+    result: Personality | null;
+}) {
     // const cellSize = Math.min(window.innerWidth / 4, window.innerHeight / 4);
 
     return (
@@ -27,6 +34,13 @@ export default function Compass({ cellSize }: { cellSize: number }) {
                                             height={cellSize}
                                             fill={elem.color}
                                         />
+
+                                        {/* <Gridlines
+                                            cellSize={cellSize}
+                                            x={x}
+                                            y={y}
+                                        /> */}
+
                                         <Text
                                             id={`${elem.quadrant}-${elem.subtype}`}
                                             x={x * cellSize}
@@ -40,6 +54,23 @@ export default function Compass({ cellSize }: { cellSize: number }) {
                                     </div>
                                 );
                             })}
+                            {result && (
+                                <Circle
+                                    x={
+                                        (result.movement! + result.speech!) *
+                                        (cellSize / 4)
+                                    }
+                                    y={
+                                        (16 -
+                                            (result.expressiveness! +
+                                                result.attitude!)) *
+                                        (cellSize / 4)
+                                    }
+                                    width={25}
+                                    height={25}
+                                    fill="black"
+                                />
+                            )}
                         </Layer>
                     );
                 })}

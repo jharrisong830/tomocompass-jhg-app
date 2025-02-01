@@ -31,9 +31,14 @@ export default function App() {
 
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log({ movement, speech, expressiveness, attitude });
         setResult(
-            calculatePersonality(movement!, speech!, expressiveness!, attitude!)
+            calculatePersonality(
+                movement!,
+                speech!,
+                expressiveness!,
+                attitude!,
+                overall!
+            )
         );
     };
 
@@ -100,7 +105,7 @@ export default function App() {
             <div className="container text-center">
                 <div className="row">
                     <div className="row">
-                        <Compass cellSize={200} />
+                        <Compass cellSize={400} result={result} />
                     </div>
                 </div>
             </div>

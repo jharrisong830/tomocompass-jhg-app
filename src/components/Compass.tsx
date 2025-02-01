@@ -1,7 +1,7 @@
 import { Stage, Layer, Rect, Circle, Text } from "react-konva";
 
 import { Personality, personalityGrid } from "../lib/personality";
-// import Gridlines from "./Gridlines";
+import Gridlines from "./Gridlines";
 
 export default function Compass({
     cellSize,
@@ -35,11 +35,7 @@ export default function Compass({
                                             fill={elem.color}
                                         />
 
-                                        {/* <Gridlines
-                                            cellSize={cellSize}
-                                            x={x}
-                                            y={y}
-                                        /> */}
+                                        <Gridlines cellSize={cellSize} />
 
                                         <Text
                                             id={`${elem.quadrant}-${elem.subtype}`}

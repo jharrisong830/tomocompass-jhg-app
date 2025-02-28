@@ -10,7 +10,6 @@ import Connections from "./components/Connections";
 
 export default function App() {
     const version = __APP_VERSION__;
-    const year = new Date().getFullYear();
     const cellSize = Math.min(
         Math.floor(window.innerWidth / 4),
         Math.floor(window.innerHeight / 4)
@@ -127,9 +126,6 @@ export default function App() {
             <div className="container text-center">
                 <p className="lead text-body-emphasis">
                     TomoCompass v{version}
-                </p>
-                <p className="lead text-body-emphasis">
-                    &copy; {year} John Graham
                 </p>
             </div>
         </main>
